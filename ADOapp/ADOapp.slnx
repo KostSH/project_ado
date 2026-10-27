@@ -1,11 +1,7 @@
-﻿<Solution>
+<Solution>
   <Project Path="ADOapp.Android/ADOapp.Android.csproj">
     <Deploy />
   </Project>
-  <Project Path="ADOapp.Browser/ADOapp.Browser.csproj" />
   <Project Path="ADOapp.Desktop/ADOapp.Desktop.csproj" />
-  <Project Path="ADOapp.iOS/ADOapp.iOS.csproj">
-    <Deploy />
-  </Project>
   <Project Path="ADOapp/ADOapp.csproj" />
 </Solution>
