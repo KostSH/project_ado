@@ -19,4 +19,8 @@
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ADOapp.Data\ADOapp.Data.csproj" />
+  </ItemGroup>
 </Project>
