@@ -1,18 +1,50 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:ADOapp.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="ADOapp.Views.MainView"
-             x:DataType="vm:MainViewModel">
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainViewModel />
-    </Design.DataContext>
-
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+<UserControl
+    x:Class="ADOapp.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:ADOapp.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:MainViewModel"
+    mc:Ignorable="d">
+    <TabControl Margin="10">
+        <TabItem Header="Клиенты">
+            <ScrollViewer>
+                <StackPanel Margin="10" Spacing="10">
+                    <TextBlock Text="Клиенты" FontSize="20" FontWeight="Bold" />
+                    <TextBlock
+                        Text="На этой вкладке - все клиенты проката."
+                        MaxWidth="300"
+                        TextWrapping="Wrap" />
+                    <ListBox x:Name="ClientsListBox" MaxWidth="300" />
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Игры">
+            <ScrollViewer>
+                <StackPanel Margin="10" Spacing="10">
+                    <TextBlock Text="Игры" FontSize="20" FontWeight="Bold" />
+                    <TextBlock
+                        Text="На этой вкладке - все настольные игры."
+                        MaxWidth="300"
+                        TextWrapping="Wrap" />
+                    <ListBox x:Name="GamesListBox" MaxWidth="300" />
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Аренды">
+            <ScrollViewer>
+                <StackPanel Margin="10" Spacing="10">
+                    <TextBlock Text="Аренды" FontSize="20" FontWeight="Bold" />
+                    <TextBlock
+                        Text="На этой вкладке - кто какую игру брал."
+                        MaxWidth="300"
+                        TextWrapping="Wrap" />
+                    <ListBox x:Name="RentalsListBox" MaxWidth="300" />
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
 </UserControl>
