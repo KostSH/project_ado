@@ -2,6 +2,8 @@
   <Project Path="ADOapp.Android/ADOapp.Android.csproj">
     <Deploy />
   </Project>
+  <Project Path="ADOapp.ConsoleApp/ADOapp.ConsoleApp.csproj" />
+  <Project Path="ADOapp.Data/ADOapp.Data.csproj" />
   <Project Path="ADOapp.Desktop/ADOapp.Desktop.csproj" />
   <Project Path="ADOapp/ADOapp.csproj" />
 </Solution>
