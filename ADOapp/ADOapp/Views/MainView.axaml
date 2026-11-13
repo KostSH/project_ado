@@ -5,44 +5,124 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:ADOapp.ViewModels"
-    d:DesignHeight="450"
+    d:DesignHeight="700"
     d:DesignWidth="800"
     x:DataType="vm:MainViewModel"
     mc:Ignorable="d">
     <TabControl Margin="10">
         <TabItem Header="Клиенты">
             <ScrollViewer>
-                <StackPanel Margin="10" Spacing="10">
+                <StackPanel Margin="10" Spacing="8">
                     <TextBlock Text="Клиенты" FontSize="20" FontWeight="Bold" />
+                    <TextBlock Text="Имя и фамилия" />
+                    <TextBox x:Name="ClientFullNameTextBox" MaxWidth="300" />
+                    <TextBlock Text="Телефон" />
+                    <TextBox x:Name="ClientPhoneTextBox" MaxWidth="300" />
+                    <TextBlock Text="Любимый жанр" />
+                    <TextBox x:Name="ClientFavoriteGenreTextBox" MaxWidth="300" />
+                    <CheckBox
+                        x:Name="ClientIsStudentCheckBox"
+                        Content="Студент"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Добавить"
+                        Click="AddClientButton_Click"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Сохранить"
+                        Click="SaveClientButton_Click"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Удалить"
+                        Click="DeleteClientButton_Click"
+                        MaxWidth="300" />
                     <TextBlock
-                        Text="На этой вкладке - все клиенты проката."
+                        x:Name="ClientMessageTextBlock"
                         MaxWidth="300"
                         TextWrapping="Wrap" />
-                    <ListBox x:Name="ClientsListBox" MaxWidth="300" />
+                    <TextBlock Text="Список клиентов" FontWeight="Bold" />
+                    <ListBox
+                        x:Name="ClientsListBox"
+                        MaxWidth="300"
+                        SelectionChanged="ClientsListBox_SelectionChanged" />
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
         <TabItem Header="Игры">
             <ScrollViewer>
-                <StackPanel Margin="10" Spacing="10">
+                <StackPanel Margin="10" Spacing="8">
                     <TextBlock Text="Игры" FontSize="20" FontWeight="Bold" />
+                    <TextBlock Text="Название игры" />
+                    <TextBox x:Name="GameTitleTextBox" MaxWidth="300" />
+                    <TextBlock Text="Жанр" />
+                    <TextBox x:Name="GameGenreTextBox" MaxWidth="300" />
+                    <TextBlock Text="Количество игроков" />
+                    <TextBox x:Name="GamePlayerCountTextBox" MaxWidth="300" />
+                    <CheckBox
+                        x:Name="GameIsPartyGameCheckBox"
+                        Content="Пати-игра"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Добавить"
+                        Click="AddGameButton_Click"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Удалить"
+                        Click="DeleteGameButton_Click"
+                        MaxWidth="300" />
                     <TextBlock
-                        Text="На этой вкладке - все настольные игры."
+                        x:Name="GameMessageTextBlock"
                         MaxWidth="300"
                         TextWrapping="Wrap" />
-                    <ListBox x:Name="GamesListBox" MaxWidth="300" />
+                    <TextBlock Text="Список игр" FontWeight="Bold" />
+                    <ListBox
+                        x:Name="GamesListBox"
+                        MaxWidth="300" />
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
         <TabItem Header="Аренды">
             <ScrollViewer>
-                <StackPanel Margin="10" Spacing="10">
+                <StackPanel Margin="10" Spacing="8">
                     <TextBlock Text="Аренды" FontSize="20" FontWeight="Bold" />
+                    <TextBlock Text="Клиент" />
+                    <ComboBox
+                        x:Name="RentalClientComboBox"
+                        MaxWidth="300" />
+                    <TextBlock Text="Игра" />
+                    <ComboBox
+                        x:Name="RentalGameComboBox"
+                        MaxWidth="300" />
+                    <TextBlock Text="Дата начала" />
+                    <CalendarDatePicker
+                        x:Name="RentalStartDatePicker"
+                        MaxWidth="300" />
+                    <TextBlock Text="Дата окончания (можно оставить пустой)" />
+                    <CalendarDatePicker
+                        x:Name="RentalEndDatePicker"
+                        MaxWidth="300" />
+                    <TextBlock Text="Цена в рублях" />
+                    <TextBox x:Name="RentalPriceRubTextBox" MaxWidth="300" />
+                    <CheckBox
+                        x:Name="RentalIsReturnedCheckBox"
+                        Content="Возвращена"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Добавить"
+                        Click="AddRentalButton_Click"
+                        MaxWidth="300" />
+                    <Button
+                        Content="Удалить"
+                        Click="DeleteRentalButton_Click"
+                        MaxWidth="300" />
                     <TextBlock
-                        Text="На этой вкладке - кто какую игру брал."
+                        x:Name="RentalMessageTextBlock"
                         MaxWidth="300"
                         TextWrapping="Wrap" />
-                    <ListBox x:Name="RentalsListBox" MaxWidth="300" />
+                    <TextBlock Text="Список аренд" FontWeight="Bold" />
+                    <ListBox
+                        x:Name="RentalsListBox"
+                        MaxWidth="300" />
                 </StackPanel>
             </ScrollViewer>
         </TabItem>
