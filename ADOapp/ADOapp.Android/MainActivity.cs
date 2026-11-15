@@ -6,7 +6,7 @@ using Avalonia.Android;
 namespace ADOapp.Android;
 
 [Activity(
-    Label = "ADOapp.Android",
+    Label = "PickDiceCool",
     Theme = "@style/MyTheme.NoActionBar",
     Icon = "@drawable/icon",
     MainLauncher = true,
