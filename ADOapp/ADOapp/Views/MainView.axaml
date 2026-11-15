@@ -11,366 +11,437 @@
     x:DataType="vm:MainViewModel"
     mc:Ignorable="d">
 
-    <TabControl Margin="12">
-        <TabItem Header="Клиенты">
-            <ScrollViewer>
-                <StackPanel
-                    MaxWidth="300"
-                    HorizontalAlignment="Center"
-                    Spacing="12"
-                    Margin="0,8,0,12">
-
-                    <TextBlock
-                        Text="Клиенты"
-                        FontSize="24"
-                        FontWeight="Bold"
-                        HorizontalAlignment="Center" />
-
-                    <TextBlock
-                        Text="Добавление, изменение и удаление клиентов."
-                        HorizontalAlignment="Center"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap" />
-
-                    <Border
-                        Padding="14"
-                        CornerRadius="12"
-                        BorderBrush="#444444"
-                        BorderThickness="1">
-                        <StackPanel Spacing="10">
-                            <TextBlock
-                                Text="Форма клиента"
-                                FontSize="18"
-                                FontWeight="SemiBold"
-                                HorizontalAlignment="Center" />
-
-                            <TextBlock Text="Имя и фамилия" />
-                            <TextBox
-                                x:Name="ClientFullNameTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: Иван Петров"
-                                KeyDown="ClientFullNameTextBox_KeyDown" />
-
-                            <TextBlock Text="Телефон" />
-                            <TextBox
-                                x:Name="ClientPhoneTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: 89112223344"
-                                KeyDown="ClientPhoneTextBox_KeyDown" />
-
-                            <TextBlock Text="Любимый жанр" />
-                            <TextBox
-                                x:Name="ClientFavoriteGenreTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: Стратегия"
-                                KeyDown="ClientFavoriteGenreTextBox_KeyDown" />
-
-                            <CheckBox
-                                x:Name="ClientIsStudentCheckBox"
-                                Content="Студент"
-                                MinHeight="42" />
-
-                            <Button
-                                Content="Добавить"
-                                MinHeight="42"
-                                Click="AddClientButton_Click" />
-
-                            <Button
-                                Content="Сохранить"
-                                MinHeight="42"
-                                Click="SaveClientButton_Click" />
-
-                            <Button
-                                Content="Удалить"
-                                MinHeight="42"
-                                Click="DeleteClientButton_Click" />
-
-                            <Border
-                                Padding="10"
-                                CornerRadius="8"
-                                Background="#1D1D1D"
-                                BorderBrush="#333333"
-                                BorderThickness="1">
-                                <TextBlock
-                                    x:Name="ClientMessageTextBlock"
-                                    MinHeight="24"
-                                    TextWrapping="Wrap" />
-                            </Border>
-                        </StackPanel>
-                    </Border>
-
-                    <TextBlock
-                        Text="Список клиентов"
-                        FontSize="18"
-                        FontWeight="SemiBold"
-                        HorizontalAlignment="Center" />
-
-                    <ListBox
-                        x:Name="ClientsListBox"
+    <Border Background="#0B1220">
+        <TabControl Margin="12">
+            <TabItem Header="Клиенты">
+                <ScrollViewer>
+                    <StackPanel
                         MaxWidth="300"
-                        MaxHeight="250"
-                        SelectionChanged="ClientsListBox_SelectionChanged">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate x:DataType="data:Clients">
+                        HorizontalAlignment="Center"
+                        Spacing="12"
+                        Margin="0,8,0,12">
+
+                        <TextBlock
+                            Text="Клиенты"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
+
+                        <TextBlock
+                            Text="Добавление, изменение и удаление клиентов."
+                            HorizontalAlignment="Center"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap"
+                            Foreground="#CBD5E1" />
+
+                        <Border
+                            Padding="14"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <StackPanel Spacing="10">
+                                <TextBlock
+                                    Text="Форма клиента"
+                                    FontSize="18"
+                                    FontWeight="SemiBold"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#F8FAFC" />
+
+                                <TextBlock Text="Имя и фамилия" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="ClientFullNameTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: Иван Петров"
+                                    KeyDown="ClientFullNameTextBox_KeyDown" />
+
+                                <TextBlock Text="Телефон" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="ClientPhoneTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: 89112223344"
+                                    KeyDown="ClientPhoneTextBox_KeyDown" />
+
+                                <TextBlock Text="Любимый жанр" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="ClientFavoriteGenreTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: Стратегия"
+                                    KeyDown="ClientFavoriteGenreTextBox_KeyDown" />
+
+                                <CheckBox
+                                    x:Name="ClientIsStudentCheckBox"
+                                    Content="Студент"
+                                    MinHeight="42"
+                                    Foreground="#E2E8F0" />
+
+                                <Button
+                                    Content="Добавить"
+                                    MinHeight="42"
+                                    Background="#2563EB"
+                                    Foreground="White"
+                                    Click="AddClientButton_Click" />
+
+                                <Button
+                                    Content="Сохранить"
+                                    MinHeight="42"
+                                    Background="#0F766E"
+                                    Foreground="White"
+                                    Click="SaveClientButton_Click" />
+
+                                <Button
+                                    Content="Удалить"
+                                    MinHeight="42"
+                                    Background="#B91C1C"
+                                    Foreground="White"
+                                    Click="DeleteClientButton_Click" />
+
                                 <Border
-                                    Margin="0,0,0,8"
                                     Padding="10"
                                     CornerRadius="8"
-                                    Background="#1E1E1E"
-                                    BorderBrush="#3A3A3A"
+                                    Background="#172554"
+                                    BorderBrush="#3B82F6"
                                     BorderThickness="1">
                                     <TextBlock
-                                        Text="{Binding}"
-                                        TextWrapping="Wrap" />
+                                        x:Name="ClientMessageTextBlock"
+                                        MinHeight="24"
+                                        TextWrapping="Wrap"
+                                        Foreground="#DBEAFE" />
                                 </Border>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </ScrollViewer>
-        </TabItem>
+                            </StackPanel>
+                        </Border>
 
-        <TabItem Header="Игры">
-            <ScrollViewer>
-                <StackPanel
-                    MaxWidth="300"
-                    HorizontalAlignment="Center"
-                    Spacing="12"
-                    Margin="0,8,0,12">
+                        <TextBlock
+                            Text="Список клиентов"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
 
-                    <TextBlock
-                        Text="Игры"
-                        FontSize="24"
-                        FontWeight="Bold"
-                        HorizontalAlignment="Center" />
-
-                    <TextBlock
-                        Text="Добавление и удаление игр."
-                        HorizontalAlignment="Center"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap" />
-
-                    <Border
-                        Padding="14"
-                        CornerRadius="12"
-                        BorderBrush="#444444"
-                        BorderThickness="1">
-                        <StackPanel Spacing="10">
-                            <TextBlock
-                                Text="Форма игры"
-                                FontSize="18"
-                                FontWeight="SemiBold"
-                                HorizontalAlignment="Center" />
-
-                            <TextBlock Text="Название игры" />
-                            <TextBox
-                                x:Name="GameTitleTextBox"
+                        <Border
+                            Padding="8"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <ListBox
+                                x:Name="ClientsListBox"
                                 MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: Alias"
-                                KeyDown="GameTitleTextBox_KeyDown" />
+                                MaxHeight="250"
+                                Background="#0F172A"
+                                BorderBrush="#64748B"
+                                BorderThickness="1"
+                                SelectionChanged="ClientsListBox_SelectionChanged">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="data:Clients">
+                                        <Border
+                                            Margin="0,0,0,8"
+                                            Padding="10"
+                                            CornerRadius="8"
+                                            Background="#1E293B"
+                                            BorderBrush="#64748B"
+                                            BorderThickness="1">
+                                            <TextBlock
+                                                Text="{Binding}"
+                                                TextWrapping="Wrap"
+                                                Foreground="#F8FAFC" />
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
 
-                            <TextBlock Text="Жанр" />
-                            <TextBox
-                                x:Name="GameGenreTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: Слова"
-                                KeyDown="GameGenreTextBox_KeyDown" />
-
-                            <TextBlock Text="Количество игроков" />
-                            <TextBox
-                                x:Name="GamePlayerCountTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: 6"
-                                KeyDown="GamePlayerCountTextBox_KeyDown" />
-
-                            <CheckBox
-                                x:Name="GameIsPartyGameCheckBox"
-                                Content="Пати-игра"
-                                MinHeight="42" />
-
-                            <Button
-                                Content="Добавить"
-                                MinHeight="42"
-                                Click="AddGameButton_Click" />
-
-                            <Button
-                                Content="Удалить"
-                                MinHeight="42"
-                                Click="DeleteGameButton_Click" />
-
-                            <Border
-                                Padding="10"
-                                CornerRadius="8"
-                                Background="#1D1D1D"
-                                BorderBrush="#333333"
-                                BorderThickness="1">
-                                <TextBlock
-                                    x:Name="GameMessageTextBlock"
-                                    MinHeight="24"
-                                    TextWrapping="Wrap" />
-                            </Border>
-                        </StackPanel>
-                    </Border>
-
-                    <TextBlock
-                        Text="Список игр"
-                        FontSize="18"
-                        FontWeight="SemiBold"
-                        HorizontalAlignment="Center" />
-
-                    <ListBox
-                        x:Name="GamesListBox"
+            <TabItem Header="Игры">
+                <ScrollViewer>
+                    <StackPanel
                         MaxWidth="300"
-                        MaxHeight="250">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate x:DataType="data:Games">
+                        HorizontalAlignment="Center"
+                        Spacing="12"
+                        Margin="0,8,0,12">
+
+                        <TextBlock
+                            Text="Игры"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
+
+                        <TextBlock
+                            Text="Добавление и удаление игр."
+                            HorizontalAlignment="Center"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap"
+                            Foreground="#CBD5E1" />
+
+                        <Border
+                            Padding="14"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <StackPanel Spacing="10">
+                                <TextBlock
+                                    Text="Форма игры"
+                                    FontSize="18"
+                                    FontWeight="SemiBold"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#F8FAFC" />
+
+                                <TextBlock Text="Название игры" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="GameTitleTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: Alias"
+                                    KeyDown="GameTitleTextBox_KeyDown" />
+
+                                <TextBlock Text="Жанр" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="GameGenreTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: Слова"
+                                    KeyDown="GameGenreTextBox_KeyDown" />
+
+                                <TextBlock Text="Количество игроков" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="GamePlayerCountTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: 6"
+                                    KeyDown="GamePlayerCountTextBox_KeyDown" />
+
+                                <CheckBox
+                                    x:Name="GameIsPartyGameCheckBox"
+                                    Content="Пати-игра"
+                                    MinHeight="42"
+                                    Foreground="#E2E8F0" />
+
+                                <Button
+                                    Content="Добавить"
+                                    MinHeight="42"
+                                    Background="#2563EB"
+                                    Foreground="White"
+                                    Click="AddGameButton_Click" />
+
+                                <Button
+                                    Content="Удалить"
+                                    MinHeight="42"
+                                    Background="#B91C1C"
+                                    Foreground="White"
+                                    Click="DeleteGameButton_Click" />
+
                                 <Border
-                                    Margin="0,0,0,8"
                                     Padding="10"
                                     CornerRadius="8"
-                                    Background="#1E1E1E"
-                                    BorderBrush="#3A3A3A"
+                                    Background="#172554"
+                                    BorderBrush="#3B82F6"
                                     BorderThickness="1">
                                     <TextBlock
-                                        Text="{Binding}"
-                                        TextWrapping="Wrap" />
+                                        x:Name="GameMessageTextBlock"
+                                        MinHeight="24"
+                                        TextWrapping="Wrap"
+                                        Foreground="#DBEAFE" />
                                 </Border>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </ScrollViewer>
-        </TabItem>
+                            </StackPanel>
+                        </Border>
 
-        <TabItem Header="Аренды">
-            <ScrollViewer>
-                <StackPanel
-                    MaxWidth="300"
-                    HorizontalAlignment="Center"
-                    Spacing="12"
-                    Margin="0,8,0,12">
+                        <TextBlock
+                            Text="Список игр"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
 
-                    <TextBlock
-                        Text="Аренды"
-                        FontSize="24"
-                        FontWeight="Bold"
-                        HorizontalAlignment="Center" />
-
-                    <TextBlock
-                        Text="Добавление и удаление аренд."
-                        HorizontalAlignment="Center"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap" />
-
-                    <Border
-                        Padding="14"
-                        CornerRadius="12"
-                        BorderBrush="#444444"
-                        BorderThickness="1">
-                        <StackPanel Spacing="10">
-                            <TextBlock
-                                Text="Форма аренды"
-                                FontSize="18"
-                                FontWeight="SemiBold"
-                                HorizontalAlignment="Center" />
-
-                            <TextBlock Text="Клиент" />
-                            <ComboBox
-                                x:Name="RentalClientComboBox"
+                        <Border
+                            Padding="8"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <ListBox
+                                x:Name="GamesListBox"
                                 MaxWidth="300"
-                                MinHeight="42" />
-
-                            <TextBlock Text="Игра" />
-                            <ComboBox
-                                x:Name="RentalGameComboBox"
-                                MaxWidth="300"
-                                MinHeight="42" />
-
-                            <TextBlock Text="Дата начала" />
-                            <CalendarDatePicker
-                                x:Name="RentalStartDatePicker"
-                                MaxWidth="300"
-                                MinHeight="42" />
-
-                            <TextBlock
-                                Text="Дата окончания (можно оставить пустой)"
-                                TextWrapping="Wrap" />
-                            <CalendarDatePicker
-                                x:Name="RentalEndDatePicker"
-                                MaxWidth="300"
-                                MinHeight="42" />
-
-                            <TextBlock Text="Цена в рублях" />
-                            <TextBox
-                                x:Name="RentalPriceRubTextBox"
-                                MaxWidth="300"
-                                MinHeight="42"
-                                Watermark="Например: 500"
-                                KeyDown="RentalPriceRubTextBox_KeyDown" />
-
-                            <CheckBox
-                                x:Name="RentalIsReturnedCheckBox"
-                                Content="Возвращена"
-                                MinHeight="42" />
-
-                            <Button
-                                Content="Добавить"
-                                MinHeight="42"
-                                Click="AddRentalButton_Click" />
-
-                            <Button
-                                Content="Удалить"
-                                MinHeight="42"
-                                Click="DeleteRentalButton_Click" />
-
-                            <Border
-                                Padding="10"
-                                CornerRadius="8"
-                                Background="#1D1D1D"
-                                BorderBrush="#333333"
+                                MaxHeight="250"
+                                Background="#0F172A"
+                                BorderBrush="#64748B"
                                 BorderThickness="1">
-                                <TextBlock
-                                    x:Name="RentalMessageTextBlock"
-                                    MinHeight="24"
-                                    TextWrapping="Wrap" />
-                            </Border>
-                        </StackPanel>
-                    </Border>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="data:Games">
+                                        <Border
+                                            Margin="0,0,0,8"
+                                            Padding="10"
+                                            CornerRadius="8"
+                                            Background="#1E293B"
+                                            BorderBrush="#64748B"
+                                            BorderThickness="1">
+                                            <TextBlock
+                                                Text="{Binding}"
+                                                TextWrapping="Wrap"
+                                                Foreground="#F8FAFC" />
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
 
-                    <TextBlock
-                        Text="Список аренд"
-                        FontSize="18"
-                        FontWeight="SemiBold"
-                        HorizontalAlignment="Center" />
-
-                    <ListBox
-                        x:Name="RentalsListBox"
+            <TabItem Header="Аренды">
+                <ScrollViewer>
+                    <StackPanel
                         MaxWidth="300"
-                        MaxHeight="250">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate x:DataType="data:Rentals">
+                        HorizontalAlignment="Center"
+                        Spacing="12"
+                        Margin="0,8,0,12">
+
+                        <TextBlock
+                            Text="Аренды"
+                            FontSize="24"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
+
+                        <TextBlock
+                            Text="Добавление и удаление аренд."
+                            HorizontalAlignment="Center"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap"
+                            Foreground="#CBD5E1" />
+
+                        <Border
+                            Padding="14"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <StackPanel Spacing="10">
+                                <TextBlock
+                                    Text="Форма аренды"
+                                    FontSize="18"
+                                    FontWeight="SemiBold"
+                                    HorizontalAlignment="Center"
+                                    Foreground="#F8FAFC" />
+
+                                <TextBlock Text="Клиент" Foreground="#E2E8F0" />
+                                <ComboBox
+                                    x:Name="RentalClientComboBox"
+                                    MaxWidth="300"
+                                    MinHeight="42" />
+
+                                <TextBlock Text="Игра" Foreground="#E2E8F0" />
+                                <ComboBox
+                                    x:Name="RentalGameComboBox"
+                                    MaxWidth="300"
+                                    MinHeight="42" />
+
+                                <TextBlock Text="Дата начала" Foreground="#E2E8F0" />
+                                <CalendarDatePicker
+                                    x:Name="RentalStartDatePicker"
+                                    MaxWidth="300"
+                                    MinHeight="42" />
+
+                                <TextBlock
+                                    Text="Дата окончания (можно оставить пустой)"
+                                    TextWrapping="Wrap"
+                                    Foreground="#E2E8F0" />
+                                <CalendarDatePicker
+                                    x:Name="RentalEndDatePicker"
+                                    MaxWidth="300"
+                                    MinHeight="42" />
+
+                                <TextBlock Text="Цена в рублях" Foreground="#E2E8F0" />
+                                <TextBox
+                                    x:Name="RentalPriceRubTextBox"
+                                    MaxWidth="300"
+                                    MinHeight="42"
+                                    PlaceholderText="Например: 500"
+                                    KeyDown="RentalPriceRubTextBox_KeyDown" />
+
+                                <CheckBox
+                                    x:Name="RentalIsReturnedCheckBox"
+                                    Content="Возвращена"
+                                    MinHeight="42"
+                                    Foreground="#E2E8F0" />
+
+                                <Button
+                                    Content="Добавить"
+                                    MinHeight="42"
+                                    Background="#2563EB"
+                                    Foreground="White"
+                                    Click="AddRentalButton_Click" />
+
+                                <Button
+                                    Content="Удалить"
+                                    MinHeight="42"
+                                    Background="#B91C1C"
+                                    Foreground="White"
+                                    Click="DeleteRentalButton_Click" />
+
                                 <Border
-                                    Margin="0,0,0,8"
                                     Padding="10"
                                     CornerRadius="8"
-                                    Background="#1E1E1E"
-                                    BorderBrush="#3A3A3A"
+                                    Background="#172554"
+                                    BorderBrush="#3B82F6"
                                     BorderThickness="1">
                                     <TextBlock
-                                        Text="{Binding}"
-                                        TextWrapping="Wrap" />
+                                        x:Name="RentalMessageTextBlock"
+                                        MinHeight="24"
+                                        TextWrapping="Wrap"
+                                        Foreground="#DBEAFE" />
                                 </Border>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </ScrollViewer>
-        </TabItem>
-    </TabControl>
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock
+                            Text="Список аренд"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            HorizontalAlignment="Center"
+                            Foreground="#F8FAFC" />
+
+                        <Border
+                            Padding="8"
+                            CornerRadius="12"
+                            Background="#111827"
+                            BorderBrush="#475569"
+                            BorderThickness="1">
+                            <ListBox
+                                x:Name="RentalsListBox"
+                                MaxWidth="300"
+                                MaxHeight="250"
+                                Background="#0F172A"
+                                BorderBrush="#64748B"
+                                BorderThickness="1">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate x:DataType="data:Rentals">
+                                        <Border
+                                            Margin="0,0,0,8"
+                                            Padding="10"
+                                            CornerRadius="8"
+                                            Background="#1E293B"
+                                            BorderBrush="#64748B"
+                                            BorderThickness="1">
+                                            <TextBlock
+                                                Text="{Binding}"
+                                                TextWrapping="Wrap"
+                                                Foreground="#F8FAFC" />
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Border>
 </UserControl>
